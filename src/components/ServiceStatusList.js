@@ -33,13 +33,11 @@ const StyledTableRow = styled(TableRow)(({theme}) => ({
 
 const ServiceStatusList = () => {
   const dispatch = useDispatch();
-  // const serviceStatus = useSelector(state => state?.serverStatus?.data)
+  const catalogs = useSelector(state => state?.serverStatus?.data)
   const status = useSelector(state => state?.serverStatus?.status)
-  const catalogs = dataFake
   const [isTableVisible, setIsTableVisible] = useState([]);
 
   const toggleTableVisibility = (index, value) => {
-    console.log(index);
     setIsTableVisible(isTableVisible => {
       const newIsTableVisible = [...isTableVisible];
       newIsTableVisible[index] = value;
@@ -114,133 +112,5 @@ const ServiceStatusList = () => {
     </Paper>
   );
 };
-
-
-const dataFake = [
-  {
-    "Catalog": "System API Global System",
-    "Report": [
-      {
-        "svc_name": "api-au-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:14.679528+00:00"
-      },
-      {
-        "svc_name": "api-br-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:15.907007+00:00"
-      },
-      {
-        "svc_name": "api-ca-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:16.944630+00:00"
-      },
-      {
-        "svc_name": "api-eu-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:17.832879+00:00"
-      },
-      {
-        "svc_name": "api-hk-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:18.276059+00:00"
-      },
-      {
-        "svc_name": "api-sgp-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:18.654097+00:00"
-      },
-      {
-        "svc_name": "api-sw-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:19.606360+00:00"
-      },
-      {
-        "svc_name": "api-uk-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:20.476254+00:00"
-      },
-      {
-        "svc_name": "api-us-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:21.477979+00:00"
-      },
-      {
-        "svc_name": "app-report",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:22.363796+00:00"
-      }
-    ]
-  },
-  {
-    "Catalog": "System Report Global Service",
-    "Report": [
-      {
-        "svc_name": "api-report-au-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:23.245495+00:00"
-      },
-      {
-        "svc_name": "api-report-br-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:23.613449+00:00"
-      },
-      {
-        "svc_name": "api-report-ca-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:24.487622+00:00"
-      },
-      {
-        "svc_name": "api-report-ge-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:25.367168+00:00"
-      },
-      {
-        "svc_name": "api-report-hk-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:26.254101+00:00"
-      },
-      {
-        "svc_name": "api-report-sgp-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:27.199021+00:00"
-      },
-      {
-        "svc_name": "api-report-sz-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:28.070636+00:00"
-      },
-      {
-        "svc_name": "api-report-uk-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:28.960952+00:00"
-      },
-      {
-        "svc_name": "api-report-us-azure",
-        "status": "Online",
-        "message": "System is currently Up",
-        "last_update": "2024-10-10T08:31:29.833874+00:00"
-      }
-    ]
-  }
-]
 
 export default ServiceStatusList
