@@ -11,7 +11,9 @@ export default function Header() {
       alignItems: 'center'
     }}>
       <Container sx={{textAlign: 'left', marginLeft: '20px'}}>
-        <h1 style={{color: 'white', marginTop: 0}}>Service Status List</h1>
+        <h1 style={{color: 'white', marginTop: 0}}>
+          MobioInteractive System Health
+        </h1>
         <div style={{color: 'white'}}>
           Updated 58 seconds ago
         </div>
